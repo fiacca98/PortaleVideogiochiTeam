@@ -23,7 +23,7 @@ export class DetailComponent implements OnInit {
   }
 
   goToEdit() {
-    this.route.navigate(['/modifica/']);
+    this.route.navigate(['/modifica/' + this.item.id]);
   }
 
   goToList() {

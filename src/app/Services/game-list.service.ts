@@ -18,6 +18,19 @@ export class GameListService {
     return this.items;
   }
 
+  findGame(nome: string): boolean{
+    let found: boolean = false;
+    for(let game of this.items)
+    {
+      if(game.nome == nome)
+      {
+        found = true;
+        
+      }
+    }
+    return found;
+  }
+
   getElementById(id: String): GameItem {
     for (let item of this.items) {
       if (item.id == id) {
@@ -38,6 +51,26 @@ export class GameListService {
     for (let item of this.items) {
       if (editGame.id == item.id) {
           editGame=item;
+      }
+    }
+  }
+
+  clone(item: GameItem){
+    return new GameItem(item.id, item.nome, item.descrizione, item.genere, item.rating, item.prezzo, item.annoUscita);
+  }
+
+  setGame(item: GameItem){
+    for(let game of this.items)
+    {
+      if(game.id == item.id)
+      {
+        game.nome = item.nome;
+        game.annoUscita = item.annoUscita;
+        game.prezzo = item.prezzo; 
+        game.descrizione = item.descrizione;
+        game.genere = item.genere;
+        game.rating = game.rating;
+        alert("modificato");
       }
     }
   }

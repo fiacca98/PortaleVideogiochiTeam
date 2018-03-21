@@ -1,3 +1,19 @@
-<p>
-  update works!
-</p>
+<input [(ngModel)]="nomeGioco"/>
+<div (click)="searchGame()" style="cursor:pointer; background-color:brown; width:10%">
+  cerca gioco
+</div>
+<div *ngIf="currentGame != null">
+  <form (ngSubmit)="saveData()" [formGroup]="gameForm">
+    {{currentGame?.id}}<br>
+    <input formControlName="nome"><br>
+    <input formControlName="descrizione"><br>
+    <input formControlName="genere"><br>
+    <input formControlName="rating"><br>
+    <input formControlName="prezzo"><br>
+    <input formControlName="annoUscita"><br>
+    
+    <button type="submit" [hidden]="gameForm.status == 'INVALID'">modifica gioco</button>
+  
+    <button type="button" (click)="ngFormReset()">reset</button>
+  </form>
+</div>
