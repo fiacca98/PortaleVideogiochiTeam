@@ -17,9 +17,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-<<<<<<< HEAD
-}
-=======
   login() {
 
     switch(this.loginService.checkData(this.username, this.password)){
@@ -45,4 +42,3 @@ export class LoginComponent implements OnInit {
   }
 
 }
->>>>>>> origin/master
