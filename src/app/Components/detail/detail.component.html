@@ -1,3 +1,11 @@
-<p>
-  detail works!
-</p>
+<div class="detail">
+  <p>Nome: {{item.nome}}</p>
+  <p>Descrzione: {{item.descrizione}}</p>
+  <p>Genere: {{item.genere}}</p>
+  <p>Rating: {{item.rating}}</p>
+  <p>Prezzo: {{item.prezzo}}</p>
+  <p>Anno di Uscita: {{item.annoUscita}}</p>
+</div>
+
+<button (click)="goToEdit()">Modifica</button>
+<button (click)="goToList()">Lista</button>
