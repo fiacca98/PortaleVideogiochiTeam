@@ -23,11 +23,11 @@ export class DetailComponent implements OnInit {
   }
 
   goToEdit() {
-    this.route.navigate(['/edit/']);
+    this.route.navigate(['/modifica/']);
   }
 
   goToList() {
-    this.route.navigate(['/list/']);
+    this.route.navigate(['/lista/']);
   }
 
 }

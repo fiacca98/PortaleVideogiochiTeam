@@ -17,8 +17,8 @@ export class ListComponent implements OnInit {
     this.items=this.gameListService.getList();
   }
 
-  selectItem(item:GameItem){
-    this.route.navigate(['/detail/'+item.id])
+  selectedItem(item:GameItem){
+    this.route.navigate(['/dettaglio/'+item.id])
   }
 
 }
