@@ -13,6 +13,7 @@ import { AuthGuardService } from './Services/auth-guard.service';
 import { AuthGuardLoginService } from './Services/auth-guard-login.service';
 import { HeaderComponent } from './Components/header/header.component';
 import { PortaleRouterModule } from './Routing/router.module';
+import { GameListService } from './Services/game-list.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { PortaleRouterModule } from './Routing/router.module';
     PortaleRouterModule,
     ReactiveFormsModule
   ],
-  providers: [LoginService, AuthGuardService, AuthGuardLoginService],
+  providers: [LoginService, AuthGuardService, AuthGuardLoginService, GameListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
