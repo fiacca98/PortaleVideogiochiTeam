@@ -83,7 +83,7 @@ export class GameListService {
         game.prezzo = item.prezzo; 
         game.descrizione = item.descrizione;
         game.genere = item.genere;
-        game.rating = game.rating;
+        game.rating = item.rating;
         alert("modificato");
       }
     }
