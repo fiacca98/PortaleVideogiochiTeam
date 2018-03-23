@@ -19,6 +19,10 @@
     font-size: 30px;
     display: inline-block;
 }
-.headerContainer div{
+.user{
     display: inline-block;
+    border: 4px;
+    cursor: pointer;
+    padding: 10px;
+    top:100px;
 }

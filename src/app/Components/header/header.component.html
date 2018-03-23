@@ -1,9 +1,9 @@
 <div class="headerContainer" >
-  <div style="cursor:pointer">
+  <div class = "user" style="cursor:pointer">
     {{username}}
   </div>
   <div class="menu">
-    <a class="home" routerLink="/home" routerLinkActive="selected">Home</a>
+    <div class="home" routerLink="/home" routerLinkActive="selected">Home</div>
     <div class="lista" routerLink="/lista" routerLinkActive="selected">Lista</div>
     <ng-container *ngIf="admin == true">
     <div class="modifica" routerLink="/modifica/x" routerLinkActive="selected">Modifica</div>
