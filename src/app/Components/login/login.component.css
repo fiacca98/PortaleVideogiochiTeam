@@ -1,5 +1,58 @@
-div {
-  color: blue;
-  text-align: center;
-  font-size: 10px;
+.popcornimg{
+  width: 500;
+  margin-left: 32%;  
+  margin-top: 30px;
 }
+.wrapper {	
+    margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid,transparent}
+
+  .form-signin-heading{
+    color: #00004d;
+  }
+  ff8000
+.form-signin-heading,.checkbox {
+      margin-bottom: 30px;
+    }
+
+    .checkbox {
+      font-weight: normal;
+    }
+
+    .form-control {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+      }
+      .form-control:focus{
+        border-color: #ff8000;
+        box-shadow: 0 0 0 0.2rem #ffc266;
+        border-bottom:#ff8000;
+      }
+
+    input[type="text"] {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    input[type="password"] {
+      margin-top: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      margin-bottom: 10px;
+    }
+    #login_button{
+      background-color: #00004d;
+      border-color: #00004d;
+    }

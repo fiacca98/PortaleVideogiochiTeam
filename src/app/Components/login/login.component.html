@@ -1,20 +1,11 @@
-<div class="container">
-  <div class="top">
-      <h1 id="title" class="hidden"><span id="logo">PORTALE VIDEOGIOCHI</span></h1>
-  </div>
-  <div class="login-box animated fadeInUp">
-      <div class="box-header">
-          <h2>Log In</h2>
-      </div>
-      <label for="username">username</label>
-      <br>
-      <input type="text" id="email" [(ngModel)]="username">
-
-      <label for="password">Password</label>
-      <br>
-      <input type="password" id="psw" [(ngModel)]="password">
-
-      <button id="sbm" type="button" (click)="login()">Entra</button>
-
-  </div>
+<img class="popcornimg" src="assets\HomeImg.png">
+<div class="wrapper">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Login</h2>
+        <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username" required="" autofocus=""/>
+        <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password" required="" />
+        <button id="login_button"class="btn btn-lg btn-primary btn-block" (click)="login()" type="button">Login</button>
+    </form>
 </div>
+
+
