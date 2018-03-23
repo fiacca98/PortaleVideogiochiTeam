@@ -1,3 +1,9 @@
 div{
     outline: none;
 }
+
+
+body {
+    background: #eee !important;	
+    font-family: 'Varela Round', sans-serif;
+}
