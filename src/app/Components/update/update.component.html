@@ -1,24 +1,33 @@
-<input [(ngModel)]="nomeGioco"/>
-<div (click)="searchGame()" style="cursor:pointer; background-color:brown; width:10%">
-  cerca gioco
+<div class="search">
+  <input [(ngModel)]="nomeGioco" />
+  <button (click)="searchGame()">cerca gioco</button>
 </div>
+
 <div *ngIf="currentGame != null">
   <form (ngSubmit)="saveData()" [formGroup]="gameForm">
-    {{currentGame?.id}}<br>
-    <input formControlName="nome"><br>
-    <input formControlName="descrizione"><br>
-    <select formControlName="genere" (change)="selectGenre($event.target.value)">
-      <option *ngFor="let genere of generi" [value]="genere.id">
+    <div class="form">
+      <label for="nome">Nome</label>
+      <input formControlName="nome">
+      <label for="nome">Descrizione</label>
+      <input formControlName="descrizione">
+      <label for="nome">Genere</label>
+      <select formControlName="genere" (change)="selectGenre($event.target.value)">
+        <option *ngFor="let genere of generi" [value]="genere.id">
           {{genere.nome}}
-      </option>
-      
-    </select><br>
-    <input formControlName="rating" type="number"><br>
-    <input formControlName="prezzo"><br>
-    <input formControlName="annoUscita"><br>
+        </option>
+
+      </select>
+      <label for="nome">Rating</label>
+      <input formControlName="rating" type="number">
+      <label for="nome">Prezzo</label>
+      <input formControlName="prezzo">
+      <label for="nome">Anno Di Uscita</label>
+      <input formControlName="annoUscita"><br>
+    
 
     <button type="submit" [hidden]="gameForm.status == 'INVALID'">modifica gioco</button>
 
     <button type="button" (click)="ngFormReset()">reset</button>
+  </div>
   </form>
 </div>
