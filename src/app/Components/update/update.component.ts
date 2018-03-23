@@ -3,6 +3,7 @@ import { GameItem } from '../../Beans/game-item';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { GameListService } from '../../Services/game-list.service';
+import { Genere } from '../../Beans/Generi';
 
 @Component({
   selector: 'app-update',
@@ -13,6 +14,8 @@ export class UpdateComponent implements OnInit {
   nomeGioco: string;
   copyGame: GameItem;
   currentGame: GameItem;
+  generi: Genere[];
+  genere: string;
 
   gameForm: FormGroup;
 
@@ -25,6 +28,7 @@ export class UpdateComponent implements OnInit {
         this.createForm();
       }
     });
+    this.generi = gameListService.getGeneri();
     
   }
 
@@ -32,7 +36,7 @@ export class UpdateComponent implements OnInit {
     this.gameForm = this.formBuilder.group({
       nome: [this.currentGame.nome,Validators.required],
       descrizione: [this.currentGame.descrizione,Validators.required],
-      genere: [this.currentGame.genere,Validators.required],
+      genere: [this.currentGame.genere.nome,Validators.required],
       rating: [this.currentGame.rating,[Validators.required,Validators.min(1), Validators.max(5)]],
       prezzo: [this.currentGame.prezzo,Validators.required],
       annoUscita: [this.currentGame.annoUscita,Validators.required],      
