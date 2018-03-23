@@ -1,0 +1,24 @@
+/*.contac div {
+  float:left;
+}*/
+
+h1 {
+  font-size: 70px;
+}
+img{
+  width: 150px;
+}
+
+.desc {
+  padding:0;
+  display: inline;
+  margin-left:150px;
+}
+
+.name {
+    font-size: 30px;
+    float: center;
+    background-color:  #ff8000;;
+    color: white;
+    padding: 10px;
+}

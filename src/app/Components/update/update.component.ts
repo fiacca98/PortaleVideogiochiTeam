@@ -3,7 +3,6 @@ import { GameItem } from '../../Beans/game-item';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { GameListService } from '../../Services/game-list.service';
-import { Genere } from '../../Beans/Genere';
 
 @Component({
   selector: 'app-update',
@@ -16,7 +15,6 @@ export class UpdateComponent implements OnInit {
   currentGame: GameItem;
 
   gameForm: FormGroup;
-  genresList: Genere[];
 
   constructor(private route: ActivatedRoute ,private gameListService: GameListService, private formBuilder: FormBuilder) {
 
@@ -68,9 +66,7 @@ export class UpdateComponent implements OnInit {
     this.gameListService.setGame(this.currentGame);
   }
 
-  ngOnInit() {
-    this.genresList = this.gameListService.getGeneri();
-  }
+
 
   ngFormReset(){
     this.gameForm.setValue({
