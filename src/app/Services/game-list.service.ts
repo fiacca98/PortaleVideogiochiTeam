@@ -21,10 +21,10 @@ export class GameListService {
   ];
 
   private items: GameItem[] = [
-    new GameItem("01", "Fifa 18", "Gioco di Calcio", "Sport", 7, 50, 2018,"assets/fifa18.jpg"),
-    new GameItem("02", "Call Of Duty", "FPS", "Guerra", 6, 50, 2016, "assets/call_of_duty.jpg"),
-    new GameItem("03", "Crash Bandicoot", "FP", "Avventura", 9, 30, 1996, "assets/crash.jpg"),
-    new GameItem("04", "Lara Croft:Tomb Rider", "Umano", "Avventura", 8, 25, 1992, "assets/tomb_raider.jpg"),
+    new GameItem("01", "Fifa 18", "Gioco di Calcio", this.generi[1], 7, 50, 2018,"assets/fifa18.jpg"),
+    new GameItem("02", "Call Of Duty", "FPS", this.generi[2], 6, 50, 2016, "assets/call_of_duty.jpg"),
+    new GameItem("03", "Crash Bandicoot", "FP", this.generi[3], 9, 30, 1996, "assets/crash.jpg"),
+    new GameItem("04", "Lara Croft:Tomb Rider", "Umano", this.generi[5], 8, 25, 1992, "assets/tomb_raider.jpg"),
 
   ];
 
