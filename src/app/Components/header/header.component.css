@@ -1,9 +1,16 @@
 .menu div{
     display: inline-block;
+    height: 100%;
     border: 4px;
     cursor: pointer;
     padding: 10px;
-    top:100px;
+    padding-top: 5px;
+    margin: 0;
+}
+.menu div:hover{
+    background-color: red;
+    color: black;
+    opacity: 0.5;
 }
 .menu{
     top: 0;
@@ -24,5 +31,5 @@
     border: 4px;
     cursor: pointer;
     padding: 10px;
-    top:100px;
+    padding-top: 5px;
 }
