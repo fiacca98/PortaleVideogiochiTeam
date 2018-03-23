@@ -7,13 +7,13 @@
     {{currentGame?.id}}<br>
     <input formControlName="nome"><br>
     <input formControlName="descrizione"><br>
-    <input formControlName="genere"><br>
+    <select (change)="selectGenre($event.target.value)"><option *ngFor="let genre of genresList" [value]="genre.id">{{genre.name}}</option> </select>
     <input formControlName="rating"><br>
     <input formControlName="prezzo"><br>
     <input formControlName="annoUscita"><br>
-    
+
     <button type="submit" [hidden]="gameForm.status == 'INVALID'">modifica gioco</button>
-  
+
     <button type="button" (click)="ngFormReset()">reset</button>
   </form>
 </div>
