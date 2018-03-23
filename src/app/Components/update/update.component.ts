@@ -17,7 +17,6 @@ export class UpdateComponent implements OnInit {
   generi: Genere[];
 
   gameForm: FormGroup;
-  genresList: Genere[];
 
   constructor(private route: ActivatedRoute ,private gameListService: GameListService, private formBuilder: FormBuilder) {
 
@@ -29,7 +28,7 @@ export class UpdateComponent implements OnInit {
       }
     });
     this.generi = gameListService.getGeneri();
-    
+
   }
 
   createForm() {
