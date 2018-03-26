@@ -1,6 +1,7 @@
 <h1 class="title">Lista videogiochi</h1>
 
 <div class="filtro">
+  Filta giochi: 
   <select [(ngModel)]="filtro">
     <option *ngFor="let genere of generi; let i=index" [(ngValue)]="genere.id">
       {{genere.nome}}
