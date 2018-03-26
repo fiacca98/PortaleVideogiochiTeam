@@ -10,6 +10,7 @@ import { GameItem } from '../../Beans/game-item'
 export class DetailComponent implements OnInit {
   item: GameItem;
   id: String;
+  admin: boolean = false;
 
   constructor(private route: Router, private gameListService: GameListService, private router: ActivatedRoute) {
     this.router.params.subscribe(params => {//
@@ -17,9 +18,19 @@ export class DetailComponent implements OnInit {
         this.item = this.gameListService.getElementById(params['id']);
       }
     });
+
+    if(sessionStorage.getItem("admin") == "yes"){
+      this.admin = true;
+    }
   }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+    if(sessionStorage.getItem("admin") == "yes"){
+      this.admin = true;
+    }
   }
 
   goToEdit() {
@@ -29,5 +40,7 @@ export class DetailComponent implements OnInit {
   goToList() {
     this.route.navigate(['/lista/']);
   }
+
+
 
 }

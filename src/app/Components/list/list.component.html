@@ -1,15 +1,24 @@
 <h1 class="title">Lista videogiochi</h1>
 
-      <div *ngFor="let item of items">
-        <div (click)="selectedItem(item)">
-            <p class="name">{{item.nome}} </p>
-            <img [src]="item.image">
-            <div class="desc">
-              <p>Descrizione: {{item.descrizione}}</p>
-              <p>Genere: {{item.genere.nome}}</p>
-              <p>Rating: {{item.rating}}</p>
-              <p>Prezzo: {{item.prezzo}}</p>
-              <p>Anno Di Uscita: {{item.annoUscita}}</p>
-          </div>
-        </div>
+<div class="filtro">
+  <select [(ngModel)]="filtro">
+    <option *ngFor="let genere of generi; let i=index" [(ngValue)]="genere.id">
+      {{genere.nome}}
+    </option>
+  </select>
+</div>
+<div *ngFor="let item of items">
+  <ng-container *ngIf="filtro == item.genere.id || filtro == '00' ">
+    <div (click)="selectedItem(item)">
+      <p class="name">{{item.nome}} </p>
+      <img [src]="item.image">
+      <div class="desc">
+        <p>Descrizione: {{item.descrizione}}</p>
+        <p>Genere: {{item.genere.nome}}</p>
+        <p>Rating: {{item.rating}}</p>
+        <p>Prezzo: {{item.prezzo}}</p>
+        <p>Anno Di Uscita: {{item.annoUscita}}</p>
       </div>
+    </div>
+  </ng-container>
+</div>

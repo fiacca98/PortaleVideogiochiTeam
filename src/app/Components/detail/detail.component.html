@@ -6,5 +6,7 @@
   <p>Prezzo: {{item.prezzo}}</p>
   <p>Anno di Uscita: {{item.annoUscita}}</p>
 </div>
+<ng-container *ngIf="admin == true">
   <button (click)="goToEdit()">Modifica</button>
-<button (click)="goToList()">Lista</button>
+</ng-container>
+<button (click)="goToList()">Indietro</button>
