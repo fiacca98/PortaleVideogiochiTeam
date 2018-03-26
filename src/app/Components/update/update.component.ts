@@ -35,7 +35,7 @@ export class UpdateComponent implements OnInit {
     this.gameForm = this.formBuilder.group({
       nome: [this.currentGame.nome,Validators.required],
       descrizione: [this.currentGame.descrizione,Validators.required],
-      genere: [this.currentGame.genere],
+      genere: [this.currentGame.genere,Validators.required],
       rating: [this.currentGame.rating,[Validators.required,Validators.min(1), Validators.max(10)]],
       prezzo: [this.currentGame.prezzo,Validators.required],
       annoUscita: [this.currentGame.annoUscita,Validators.required],
