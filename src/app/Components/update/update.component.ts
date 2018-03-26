@@ -15,7 +15,7 @@ export class UpdateComponent implements OnInit {
   copyGame: GameItem;
   currentGame: GameItem;
   generi: Genere[];
-
+  genere: string;
   gameForm: FormGroup;
 
   constructor(private route: ActivatedRoute ,private gameListService: GameListService, private formBuilder: FormBuilder, private router: Router) {
@@ -24,6 +24,7 @@ export class UpdateComponent implements OnInit {
       if(params["id"] != "" && params["id"] != null && params["id"] != "x"){
         this.copyGame = this.gameListService.getElementById(params["id"]);
         this.currentGame = gameListService.clone(this.copyGame);
+        this.genere = this.currentGame.genere.id;
         this.createForm();
       }
     });
@@ -48,6 +49,7 @@ export class UpdateComponent implements OnInit {
 
       this.copyGame = this.gameListService.getElementByName(this.nomeGioco);
       this.currentGame = this.gameListService.clone(this.copyGame);
+      this.genere = this.currentGame.genere.id;
       this.createForm();
     }
     else{

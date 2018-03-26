@@ -11,7 +11,7 @@
       <label for="nome">Descrizione</label>
       <input formControlName="descrizione">
       <label for="nome">Genere</label>
-      <select formControlName="genere" (change)="selectGenre($event.target.value)">
+      <select formControlName="genere" (change)="selectGenre($event.target.value)" [value]="genere">
         <option *ngFor="let genere of generi"  [value]="genere.id">
           {{genere.nome}}
         </option>
