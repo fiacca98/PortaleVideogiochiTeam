@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameItem } from '../../Beans/game-item';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GameListService } from '../../Services/game-list.service';
 import { Genere } from '../../Beans/Generi';
 
@@ -18,7 +18,7 @@ export class UpdateComponent implements OnInit {
 
   gameForm: FormGroup;
 
-  constructor(private route: ActivatedRoute ,private gameListService: GameListService, private formBuilder: FormBuilder) {
+  constructor(private route: ActivatedRoute ,private gameListService: GameListService, private formBuilder: FormBuilder, private router: Router) {
 
     this.route.params.subscribe(params => {
       if(params["id"] != "" && params["id"] != null && params["id"] != "x"){
@@ -66,6 +66,7 @@ export class UpdateComponent implements OnInit {
     this.currentGame.prezzo = this.gameForm.get("prezzo").value;
     this.currentGame.annoUscita = this.gameForm.get("annoUscita").value;
     this.gameListService.setGame(this.currentGame);
+    this.router.navigate(['/dettaglio/'+this.currentGame.id]);
   }
 
   ngOnInit() { }
@@ -80,6 +81,10 @@ export class UpdateComponent implements OnInit {
       annoUscita: this.currentGame.annoUscita,
     });
     this.currentGame = this.gameListService.clone(this.copyGame);
+  }
+
+  goToDetail(){
+    
   }
 
 }
