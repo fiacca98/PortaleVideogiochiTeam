@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameItem } from '../../Beans/game-item';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router'
 import { GameListService } from '../../Services/game-list.service';
 import { Genere } from '../../Beans/Generi';
 
